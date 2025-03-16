@@ -28,9 +28,10 @@ function colorSquare(){
 }
 function changeSize(input){
     if (input >= 2 && input <= 100){
+        document.querySelector('.error').style.display='none'
         populateBoard(input);
     }else {
-        console.log("Size must be between 2 and 100");
+        document.querySelector('error').style.display = 'flex';
     }
 }
 

@@ -13,10 +13,10 @@
         <div class="content">
             <div class="board"></div>
             <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Eraser</button>
-                <button onclick="changeColor('random')">random</button>
-                <button onclick="resetColor()">reset</button>
+                <button class = "blackButton" onclick="changeColor('black')">Black</button>
+                <button class = "whiteButton" onclick="changeColor('white')">Eraser</button>
+                <button class = "randomButton" onclick="changeColor('random')">random</button>
+                <button class = "resetButton" onclick="resetColor()">reset</button>
             </div>
             <div>
                 <input type="text" placeholder="Set board size" value="16" onchange="changeSize(this.value)">
@@ -24,9 +24,12 @@
                 
             </div>
         </div>
-        <div>
+        <div class="colorPick">
             <label for="favcolor">Select your favorite color:</label>
                 <input type="color" id="favcolor" value="#ff0000" onchange="pickColor()">
+        </div>
+        <div class="error">
+            input must be between 2 and 100
         </div>
     </div>
 </body>
